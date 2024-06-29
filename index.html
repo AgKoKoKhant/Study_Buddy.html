@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .images img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Study Buddy (Capstone Project)</h1>
+        <div class="section">
+            <h2>React App Features</h2>
+            <h3>General</h3>
+            <ul>
+                <li>Register for new account</li>
+                <li>Login to app</li>
+            </ul>
+            <h3>Study Groups / Chats</h3>
+            <ul>
+                <li>Study groups with chatting.</li>
+                <li>Able to send images/videos/files.</li>
+                <li>Able to view images/play videos in full screen by tapping on them from the chat screen.</li>
+                <li>Able to download files sent</li>
+                <li>Search for users to chat 1 to 1</li>
+                <li>Both light mode and dark mode available</li>
+                <li>Mobile responsive for small device</li>
+                <li>Autoscroll to last message when clicking on each chat list.</li>
+                <li>Display message send time based on current timestamp.</li>
+            </ul>
+            <h3>Events</h3>
+            <ul>
+                <li>View all available events with Calendar View</li>
+                <li>Join events or View Discussion (already member of group) by clicking each event</li>
+                <li>Create new events based on Date and Time</li>
+                <li>Have Agenda View.</li>
+            </ul>
+            <h3>Books</h3>
+            <ul>
+                <li>View books recommended based on interests & groups joined</li>
+                <li>Search for books with autocomplete feature</li>
+                <li>View books</li>
+            </ul>
+            <h3>Profile</h3>
+            <ul>
+                <li>View current profile</li>
+                <li>Change profile photo by clicking upload photo (Drag and Drop supported)</li>
+                <li>Edit interests, email, display name</li>
+                <li>Change password</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Technical Challenges</h2>
+            <h3>React Hook</h3>
+            <ul>
+                <li>React hook is a bit tricky. If you don’t handle API requests properly using hook effect, you will get memory heat problems.</li>
+                <li>React hook is a newly introduced feature, it takes a bit of time to understand and use it.</li>
+            </ul>
+            <h3>Client Site Routing</h3>
+            <ul>
+                <li>react-router-dom V6 is used for client site routing. It takes a bit of time to know how to use the library.</li>
+            </ul>
+            <h3>CORS issue</h3>
+            <ul>
+                <li>This issue always happens when server and client site are not in the same domain. So, server rejects every request from client because of CORS issue.</li>
+                <li>Able to solve by setting up CORS compatibility setting in backend code.</li>
+            </ul>
+            <h3>Styling issue</h3>
+            <ul>
+                <li>In order to support multi mode in chat style, style was created using SASS instead of CSS. By using SASS, eliminated lots of duplicate code.</li>
+            </ul>
+            <h3>HTTPS issue</h3>
+            <ul>
+                <li>In order to send data over the internet, browser complains unless it is being sent over a HTTPS tunnel. So React is running behind a Nginx reverse proxy providing HTTPS support.</li>
+                <li>If React is running with HTTPS, it can't send data to JAVA backend as it was running without HTTPS. So now all the servers are behind Nginx reverse proxies.</li>
+            </ul>
+            <h3>Auto Scroll</h3>
+            <ul>
+                <li>Auto scroll chat history when there is a new message especially image in React. When a message arrives, auto scroll will be triggered but the image is still loading, and the browser doesn’t know the exact height to be scrolled yet.</li>
+                <li>So able to solve the issue by adding an auto scroll function inside the onload event of the image.</li>
+            </ul>
+            <h3>State Management</h3>
+            <ul>
+                <li>React UI state management. To maintain a single source of truth between Parent and Child components.</li>
+            </ul>
+        </div>
+        <div class="section images">
+            <h2>Landing Page</h2>
+            <img src="LandingForm.jpg" alt="Landing Page">
+            <h2>Event Page with Calendar View</h2>
+            <img src="Calendar.jpg" alt="Event Page with Calendar View">
+            <h2>Profile Page</h2>
+            <img src="Profile.jpg" alt="Profile Page">
+            <h2>Chat UI (Dark Mode)</h2>
+            <img src="ChatUI(Dark).jpg" alt="Chat UI (Dark Mode)">
+            <h2>Chat UI (Light Mode)</h2>
+            <img src="ChatUI(Light Mode).jpg" alt="Chat UI (Light Mode)">
+            <h2>Gif Supported</h2>
+            <img src="Gif Supported.jpg" alt="Gif Supported">
+            <h2>Emoji Supported</h2>
+            <img src="Emoji Supported.jpg" alt="Emoji Supported">
+        </div>
+        
+    </div>
+</body>
+</html>
